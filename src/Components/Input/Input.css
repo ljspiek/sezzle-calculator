@@ -1,0 +1,18 @@
+.input {
+  height: 4em;
+  display: flex;
+  justify-content: flex-end;
+
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  background-color: #1e1e1e;
+  color: #888888;
+  flex: 1;
+  outline: 1px solid #888888;
+}
+
+.operator {
+  background-color: #fe9241;
+  color: #ffffff;
+}
