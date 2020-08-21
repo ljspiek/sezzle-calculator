@@ -7,7 +7,9 @@ import Results from "./Components/Results/Results";
 import Header from "./Components/Header/Header";
 import * as math from "mathjs";
 
-const client = new W3CWebSocket("ws://127.0.0.1:8000");
+const client = new W3CWebSocket(
+  "ws://powerful-atoll-83144.herokuapp.com/" || "ws://127.0.0.1:8000"
+);
 
 export default class App extends Component {
   state = {
@@ -16,9 +18,6 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    client.onopen = () => {
-      console.log("WebSocket Client Connected");
-    };
     client.onmessage = (message) => {
       const dataFromServer = JSON.parse(message.data);
       if (dataFromServer.type === "message") {
@@ -61,6 +60,10 @@ export default class App extends Component {
   render() {
     return (
       <>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap"
+          rel="stylesheet"
+        ></link>
         <Header />
         <div className="grid-container">
           <div className="calc-wrapper grid-item">
