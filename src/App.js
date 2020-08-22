@@ -8,7 +8,7 @@ import Header from "./Components/Header/Header";
 import * as math from "mathjs";
 
 const client = new W3CWebSocket(
-  "ws://powerful-atoll-83144.herokuapp.com/" || "ws://127.0.0.1:8000"
+  "wss://powerful-atoll-83144.herokuapp.com/" || "ws://127.0.0.1:8000"
 );
 
 export default class App extends Component {
